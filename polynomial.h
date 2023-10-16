@@ -2,18 +2,16 @@
 using namespace std;
 
 class Polynomial {
-private:
-    int order; // порядок многочлена
-    int* coefficients; // набор коэффициентов
-
 public:
-    // Конструктор
-    Polynomial(int order, int* coefficients);
-    // Деструктор
-    ~Polynomial();
-    // Вычисление значения многочлена для данного параметра
-    int evaluate(int x);
-    // Вывод многочлена на экран
-    char* c_str();
-};
+	Polynomial(int order, int* coefficients);
+	Polynomial(const Polynomial&);
+	~Polynomial();
+	int evaluate(int x);
+	char* c_str();
+	void setById(int id, int coefficients);
+	int get(int id);
+private:
+	int order; // РџРѕСЂСЏРґРѕРє
+	int* coefficients;
 
+};
