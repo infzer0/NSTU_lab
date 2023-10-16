@@ -5,19 +5,19 @@
 using namespace std;
 
 int main() {
-    int order = 3;
-    int coefficients[] = { 2, 1, -6, 3 };
-    Polynomial polynomial(order, coefficients);
-
+    int coefficients[] = { 1, 7, 12, 43 };
+    Polynomial polynomial(3, coefficients);
     cout << polynomial.c_str() << endl;
 
-    int x = 2;
+    int x = 7;
     int result = polynomial.evaluate(x);
-
     cout << "Polynomial value for x = " << x << ": " << result << endl;
+
+    polynomial.setById(2, 6);
+    cout << polynomial.c_str() << endl;
+
+    int coefficient = polynomial.get(2);
+    cout << "Coefficient at index 2: " << coefficient << endl;
 
     return 0;
 }
-
-
-
